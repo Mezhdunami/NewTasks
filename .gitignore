@@ -13,7 +13,7 @@
 #TASK2
 *.docx
 *.jpg
-NewTasks/SomeIgnoredFiles3/*.jpg
+NewTasks/SomeIgnoredFiles3/*
 NewTasks/SomeIgnoredFiles1/!2.txt
 NewTasks/SomeIgnoredFiles2/!5.txt
 NewTasks/SomeIgnoredFiles3/!5.txt
