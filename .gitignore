@@ -14,8 +14,9 @@
 *.docx
 *.jpg
 NewTasks/SomeIgnoredFiles3/*.jpg
-!2.txt
-!5.txt
+NewTasks/SomeIgnoredFiles1/!2.txt
+NewTasks/SomeIgnoredFiles2/!5.txt
+NewTasks/SomeIgnoredFiles3/!5.txt
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
