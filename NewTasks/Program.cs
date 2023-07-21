@@ -3,5 +3,5 @@ Console.WriteLine("Hello, World!");
 Console.WriteLine("Hello again!");
 Console.WriteLine("22222");
 
-
-Console.WriteLine("Task 20 - VENTIUM");
+Console.WriteLine("Develop2 Task - Hello, Denis!");
+Console.WriteLine("TASK 13!");
