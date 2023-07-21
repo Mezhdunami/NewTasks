@@ -13,10 +13,16 @@
 #TASK2
 *.docx
 *.jpg
+<<<<<<< HEAD
 NewTasks/SomeIgnoredFiles3/*
 *NewTasks/SomeIgnoredFiles1/1.txt
 *NewTasks/SomeIgnoredFiles2/3.txt
 *NewTasks/SomeIgnoredFiles2/4.txt
+=======
+NewTasks/SomeIgnoredFiles3/*.jpg
+!2.txt
+!5.txt
+>>>>>>> d30275c (Task2 gitignore)
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
