@@ -37,12 +37,13 @@ namespace Task_3
 
             Console.WriteLine("Enter a Number: ");
             int number = int.Parse(Console.ReadLine());
-            Console.WriteLine((number + number) * 2);
+            int actRes = (number * 2) + number;
+            Console.WriteLine(number +" + "+number +" * 2"+" = "+actRes);
 
             //Task 4 
 
-            int a = -34; //int: Represents signed 32-bit integers, which can store values from -2,147,483,648 to 2,147,483,647, including 0.//
-            int b = 4;//int: Represents signed 32-bit integers, which can store values from -2,147,483,648 to 2,147,483,647, including 0.
+            short a = -34; //int: Represents signed 32-bit integers, which can store values from -2,147,483,648 to 2,147,483,647, including 0.//
+            byte b = 4;//int: Represents signed 32-bit integers, which can store values from -2,147,483,648 to 2,147,483,647, including 0.
             String c = "Hello";//string - stores text, such as "Hello World". String values are surrounded by double quotes
             char d = 'R'; // stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
             double e = 23.093433222; //stores floating point numbers, with decimals, such as 19.99 or -19.99
