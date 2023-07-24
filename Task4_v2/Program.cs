@@ -119,19 +119,45 @@ namespace Task_4
         {
 
             int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 20 };
-            int sum = numbers[0] + numbers[8];
+            int sum = numbers[0] + numbers[numbers.Length - 1]; ;
             Console.WriteLine("Sum of the first and last numbers: " + sum);
         }
 
     public static void Task7()
     {
-        int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 20 };
+            // Create an array of numbers
+            int[] numbers = { 3, 8, 2, 9, 5, 1, 7 };
 
-        int maxNumber = numbers.Max(); // Finding the maximum number in the array using Max()
-        int minNumber = numbers.Min(); // Finding the minimum number in the array using Min()
-        int sum = maxNumber + minNumber;
-        Console.WriteLine("Biggest number " + maxNumber + " + " + "Lowest number " + minNumber + " = " + sum);
-    }
+            // Find the minimum and maximum elements and their indexes
+            int min = numbers[0];
+            int max = numbers[0];
+            int minIndex = 0;
+            int maxIndex = 0;
+
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                if (numbers[i] < min)
+                {
+                    min = numbers[i];
+                    minIndex = i;
+                }
+
+                if (numbers[i] > max)
+                {
+                    max = numbers[i];
+                    maxIndex = i;
+                }
+            }
+
+            // Calculate the sum of the indexes of the minimum and maximum elements
+            int sumOfIndexes = minIndex + maxIndex;
+
+            // Display the results
+            Console.WriteLine("Array: " + string.Join(", ", numbers));
+            Console.WriteLine("Minimum element: " + min + " at index " + minIndex);
+            Console.WriteLine("Maximum element: " + max + " at index " + maxIndex);
+            Console.WriteLine("Sum of indexes: " + sumOfIndexes);
+        }
 
     public static void Task8()
     {
@@ -192,24 +218,22 @@ namespace Task_4
         public static void Task10()
         {
             // Create a two-dimensional array containing numbers from 1 to 9
-            int[,] numbers = new int[3, 3]
+            int[,] numbers = new int[,]
             {
-             { 1, 2, 3 },
-             { 4, 5, 6 },
-             { 7, 8, 9 }
+                  { 1, 2, 3 },
+                  { 4, 5, 6 },
+                  { 7, 8, 9 }
             };
 
-            //  // Loop through the rows of the array
-            for (int row = 0; row < 3; row++)
+            // Loop through the rows of the array
+            for (int row = 0; row < numbers.GetLength(0); row++)
             {
                 // Loop through the columns of the array
-                for (int col = 0; col < 3; col++)
+                for (int col = 0; col < numbers.GetLength(1); col++)
                 {
                     Console.Write(numbers[row, col] + " ");
                 }
                 Console.WriteLine();
-
-
 
 
 
@@ -220,50 +244,78 @@ namespace Task_4
 
         public static void Task11()
         {
+            // Create the initial array
             int[] array1 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
             // 1. Add the number 11 to the end of the array
-            Array.Resize(ref array1, array1.Length + 1);
-            array1[array1.Length - 1] = 11;
+            int[] newArray1 = new int[array1.Length + 1];
+            for (int i = 0; i < array1.Length; i++)
+            {
+                newArray1[i] = array1[i];
+            }
+            newArray1[array1.Length] = 11;
 
             // 2. Add the number -1 to the beginning of the array
-            Array.Resize(ref array1, array1.Length + 1);
-            Array.Copy(array1, 0, array1, 1, array1.Length - 1);
-            array1[0] = -1;
-
-            // 3. Add number 12 to position 4
-            Array.Resize(ref array1, array1.Length + 1);
-            Array.Copy(array1, 4, array1, 5, array1.Length - 5);
-            array1[4] = 12;
-
-            // 4. Remove the first element of the array
-            Array.Copy(array1, 1, array1, 0, array1.Length - 1);
-            Array.Resize(ref array1, array1.Length - 1);
-
-            // 5. Creating an array from two arrays
-            int[] array2 = { 100, 200, 300 };
-            int[] resultArray = new int[array1.Length + array2.Length];
-            Array.Copy(array1, resultArray, array1.Length);
-            Array.Copy(array2, 0, resultArray, array1.Length, array2.Length);
-
-            // Print the resulting array
-            Console.WriteLine("Resulting array:");
-            foreach (int num in resultArray)
+            int[] newArray2 = new int[array1.Length + 1];
+            newArray2[0] = -1;
+            for (int i = 1; i < newArray2.Length; i++)
             {
-                Console.Write(num + " ");
+                newArray2[i] = array1[i - 1];
             }
 
+            // 3. Add number 12 to position 4
+            int[] newArray3 = new int[array1.Length + 1];
+            for (int i = 0; i < 4; i++)
+            {
+                newArray3[i] = array1[i];
+            }
+            newArray3[4] = 12;
+            for (int i = 4; i < array1.Length; i++)
+            {
+                newArray3[i + 1] = array1[i];
+            }
 
+            // 4. Remove the first element of the array
+            int[] newArray4 = new int[array1.Length - 1];
+            for (int i = 1; i < array1.Length; i++)
+            {
+                newArray4[i - 1] = array1[i];
+            }
+
+            // 5. Creating an array from two arrays: array1 and array2
+            int[] array2 = { 100, 200, 300 };
+            int[] combinedArray = new int[array1.Length + array2.Length];
+            for (int i = 0; i < array1.Length; i++)
+            {
+                combinedArray[i] = array1[i];
+            }
+            for (int i = 0; i < array2.Length; i++)
+            {
+                combinedArray[array1.Length + i] = array2[i];
+            }
+
+            // Print the results
+            Console.WriteLine("New Array 1:");
+            Console.WriteLine(string.Join(", ", newArray1));
+            Console.WriteLine("\nNew Array 2:");
+            Console.WriteLine(string.Join(", ", newArray2));
+            Console.WriteLine("\nNew Array 3:");
+            Console.WriteLine(string.Join(", ", newArray3));
+            Console.WriteLine("\nNew Array 4:");
+            Console.WriteLine(string.Join(", ", newArray4));
+            Console.WriteLine("\nCombined Array:");
+            Console.WriteLine(string.Join(", ", combinedArray));
         }
-
     }
 
-
-
-
-   
-   
 }
+
+
+
+
+   
+   
+
 
 
 
