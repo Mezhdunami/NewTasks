@@ -5,7 +5,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Clients client1 = new Clients("Roger", "Prokowsky", 44, false);
+        Client client1 = new Client("Roger", "Prokowsky", 44, false);
         OfficeWorker officeWorker1 = new OfficeWorker
         {
             Name = "Office Worker - Nick",

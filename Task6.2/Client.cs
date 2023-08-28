@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Task6._2
 {
-    public class Clients : Person
+    public class Client : Person
     {
         public bool VIP { get; set; } = false;
 
 
-        public Clients(string name, string lastName, int age,bool vipS)
+        public Client(string name, string lastName, int age,bool vipS)
         {
             Name = name;
             LastName = lastName;
