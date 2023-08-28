@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task6._2
 {
-    public class Manager:Person
+    sealed class Manager:Employees
     {
        
   
