@@ -5,7 +5,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Clients client1 = new Clients("Roger", "Prokowsky", 44, true);
+        Clients client1 = new Clients("Roger", "Prokowsky", 44, false);
         OfficeWorker officeWorker1 = new OfficeWorker
         {
             Name = "Office Worker - Nick",
@@ -19,20 +19,14 @@ internal class Program
             Age = 29
         };
 
-        Console.WriteLine($"Is {client1.Name} a VIP? - {client1.VIP}");
+        Console.Write(client1.Name);
         client1.TakeLoan();
-        officeWorker1.EmployeeOfTheMonth();
-        manager1.EmployeeOfTheMonth();
-        officeWorker1.QuitJob();
-        manager1.QuitJob();
 
-        manager1.FiresPerson(officeWorker1);
-
-        officeWorker1.Position();
-        
        
 
-        
+
+
+
 
 
 

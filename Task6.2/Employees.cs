@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task6._2
 {
-    public class Employees
+    public class Employees:Person
     {
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public int Age { get; set; }
 
-  
 
         public void EmployeeOfTheMonth()
         {

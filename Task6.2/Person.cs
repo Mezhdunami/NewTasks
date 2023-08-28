@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Task6._2
 {
-    public class VIPP
+    public class Person
     {
+        public string Name { get; set; }
+        public string LastName { get; set; }
+        public int Age { get; set; }
 
-        public bool VIP { get; set; }
 
-    
     }
 }

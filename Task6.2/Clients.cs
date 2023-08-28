@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task6._2
 {
-    public class Clients : VIPP
+    public class Clients : Person
     {
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public int Age { get; set; }
+        public bool VIP { get; set; } = false;
 
 
         public Clients(string name, string lastName, int age,bool vipS)
@@ -22,13 +20,24 @@ namespace Task6._2
 
         }
 
+        private void TakeLoanz()
+        {
+            if (VIP == true)
+            {
+                Console.WriteLine(" Took a loan from the Bank");
+            }
+            else
+            {
+                Console.WriteLine(" Can't take the loan");
+            }
+        }
         public void TakeLoan()
         {
-            Console.WriteLine(Name+" Took a loan from the bank");
+            TakeLoanz();
         }
-
-
     }
-    }
+
+}
+    
 
 
