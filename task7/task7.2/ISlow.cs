@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace task7
 {
 
-    internal interface IsSlowInterface
+    internal interface ISlow
     {
         void IsSlow();
     }

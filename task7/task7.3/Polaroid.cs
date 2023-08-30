@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace task7
 {
-    public class Polaroid : GadgetsAbstract, IParameters, IParameters2
+    public class Polaroid : Gadgets, IPrint, ITakePhoto
     {
         private int paperWidth;
         private int paperHeight;

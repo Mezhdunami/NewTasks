@@ -3,38 +3,36 @@
     public class Program
     {
         //Task1
-        //static void Main(string[] args)
-        //{
-        //    
-        //    Person1 firstPerson = new Person1
-        //    {
-        //        Name = "",
-        //        Age = 0
-        //    };
+        static void Main(string[] args)
+        {
 
-        //    Person2 secondPerson = new Person2
-        //    {
-        //        Name = "",
-        //        Age = 0
-        //    };
+            Manager Manager = new Manager
+            {
+                Name = "",
+                Age = 0
+            };
 
-        //    firstPerson.SetName("Anton");
-        //    firstPerson.SetAge(23);
+            Director Director = new Director
+            {
+                Name = "",
+                Age = 0
+            };
 
-        //    secondPerson.SetName("Ben");
-        //    secondPerson.SetAge(54);
+            Manager.SetName("Anton");
+            Manager.SetAge(23);
 
+            Director.SetName("Mark");
 
-        //    firstPerson.SaysHi();
-        //    secondPerson.SaysHi();
+            Director.SetPosition("SEO");
+                
 
-        //}
+        }
         //Task1
 
-        
-        
-        
-        
+
+
+
+
         ////Task2
         //static void Main(string[] args)
         //{

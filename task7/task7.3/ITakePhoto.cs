@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace task7
 {
-    internal interface IParameters
+    internal interface ITakePhoto
     {
-        void Print();
+        void TakePhoto();
     }
 }

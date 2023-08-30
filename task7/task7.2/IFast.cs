@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace task7
 {
-    internal interface IParameters2
+    internal interface IFast
     {
-        void TakePhoto();
+        void Isfast();
+        
     }
 }

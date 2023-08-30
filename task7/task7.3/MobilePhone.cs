@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace task7
 {
-    public class MobilePhone : GadgetsAbstract, IParameters2
+    public class MobilePhone : Gadgets, ITakePhoto
     {
         private double numberOfPixelsInCamera;
         private string? modelName;

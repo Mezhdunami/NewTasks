@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace task7
 {
-    internal class Car : Vehicle, IsFastInterFace, IsSlowInterface
+    internal class Car : Vehicle, IFast, ISlow
     {
         public void Isfast()
         {

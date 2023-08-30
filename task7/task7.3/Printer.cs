@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace task7
 {
-    public class Printer:GadgetsAbstract, IParameters
+    public class Printer:Gadgets, IPrint
     {
         private int paperWidth;
         private int paperHeight;

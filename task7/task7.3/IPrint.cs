@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace task7
 {
-    internal interface IsFastInterFace
+    internal interface IPrint
     {
-        void Isfast();
-        
+        void Print();
     }
 }

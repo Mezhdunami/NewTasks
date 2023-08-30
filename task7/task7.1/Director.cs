@@ -6,15 +6,20 @@ using System.Threading.Tasks;
 
 namespace task7
 {
-    public class Person1 : PersonAbstract
+    public class Director : EmployeeAbstract
     {
         public override string Name { get; set; }
+        public string Position { get; set; }
         
-        public override void SaysHi()
+        public override void Speaks()
         {
-            Console.WriteLine($"{Name} Waves and says Hi!");
+            Console.WriteLine($"{Name} is talking");
         }
-
+        public void SetPosition(string position)
+        {
+            Position = position;
+            Console.WriteLine($"{Name} is in a {Position}'s position");
+        }
         public void SetName(string name)
         {
             Name = name;

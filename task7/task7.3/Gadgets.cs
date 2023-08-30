@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace task7
 {
-    public abstract class GadgetsAbstract
+    public abstract class Gadgets
     {
         public abstract string Description { get; }
 

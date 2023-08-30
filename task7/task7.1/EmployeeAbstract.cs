@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace task7
 {
-    public abstract class PersonAbstract
+    public abstract class EmployeeAbstract
     {
         public int Age { get; set; }
         public abstract string Name { get; set; }
 
-        public abstract void SaysHi();
+        public abstract void Speaks();
         public void SetAge(int age)
         {
             Age = age;
